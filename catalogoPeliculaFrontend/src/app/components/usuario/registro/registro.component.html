@@ -1,0 +1,43 @@
+<div class="container d-flex justify-content-center align-items-center vh-100">
+  <div class="card shadow-lg p-4 rounded-4" style="width: 420px;">
+    <div class="card-body">
+      <h3 class="text-center mb-4 text-success fw-bold">Registro</h3>
+
+      <!-- Mostrar mensajes -->
+      <div *ngIf="mensaje" class="alert alert-info">{{mensaje}}</div>
+
+      <form (ngSubmit)="registrar()">
+        <div class="mb-3">
+          <label for="nombre" class="form-label fw-semibold">Nombre</label>
+          <input type="text" id="nombre" class="form-control" [(ngModel)]="nombre" name="nombre" required placeholder="Ingresa tu nombre">
+        </div>
+
+        <div class="mb-3">
+          <label for="correo" class="form-label fw-semibold">Correo</label>
+          <input type="email" id="correo" class="form-control" [(ngModel)]="correo" name="correo" required placeholder="Ingresa tu correo">
+        </div>
+
+        <div class="mb-3">
+          <label for="contrasena" class="form-label fw-semibold">Contraseña</label>
+          <input type="password" id="contrasena" class="form-control" [(ngModel)]="contrasena" name="contrasena" required placeholder="Crea tu contraseña">
+        </div>
+
+        <div class="d-grid">
+          <button type="submit" class="btn btn-success rounded-pill">
+            <i class="bi bi-person-check"></i> Registrarse
+          </button>
+        </div>
+      </form>
+
+      <div class="text-center my-3">
+        <span class="text-muted">¿Ya tienes cuenta?</span>
+      </div>
+
+      <div class="d-grid">
+        <button class="btn btn-outline-primary rounded-pill" (click)="goToLogin()">
+          <i class="bi bi-box-arrow-in-right"></i> Iniciar Sesión
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

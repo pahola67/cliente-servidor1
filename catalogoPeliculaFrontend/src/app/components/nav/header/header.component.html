@@ -1,0 +1,41 @@
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg bg-dark border-bottom border-body">
+  <div class="container-fluid">
+    <a class="navbar-brand text-white" >Catalogo</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav me-auto">
+        <li class="nav-item">
+          <a class="nav-link active text-white" routerLink="/listar">Peliculas</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white" href="#">Series</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white" href="#">Películas</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white" href="#">Novedades</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white" href="#">Mi lista</a>
+        </li>
+      </ul>
+      
+      <!-- Mostrar información del usuario si está logueado -->
+     <div *ngIf="usuario" class="d-flex align-items-center me-3">
+        <span class="text-white me-2">Hola, {{usuario.nombre || usuario.correo}}</span>
+      </div>
+      
+      
+      <div class="d-flex">
+        <div *ngIf="usuario">
+          <button class="btn btn-outline-light" (click)="logout()">Cerrar sesión</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+

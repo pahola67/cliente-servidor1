@@ -1,0 +1,46 @@
+<app-header></app-header>
+<div class="container mt-5">
+    <div class="card">
+        <div class="card-header ">
+            
+            <div class="d-grid gap-2 d-md-flex justify-content-md-between ">
+                <h3>Catalogo</h3>
+                <button class="btn btn-primary" type="button" routerLink="/agregar">Agregar Pelicula</button>  <!--Error-->
+              </div>
+        </div>
+        <div class="card-body">
+            <table class="table table-hover">
+                
+                <thead>
+                    <tr class="text-center">
+                        <th>ID</th>
+                        <th>Año</th>
+                        <th>Creado Por</th>
+                        <th>Director</th>
+                        <th>Duración</th>
+                        <th>Idioma</th>
+                        <th>País</th>
+                        <th>Título</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                         <tr *ngFor="let pelicula of peliculas">
+        <td>{{ pelicula.id }}</td>
+        <td>{{ pelicula.anio }}</td>
+        <td>{{ pelicula.creado_por }}</td>
+        <td>{{ pelicula.director }}</td>
+        <td>{{ pelicula.duracion }}</td>
+        <td>{{ pelicula.idioma }}</td>
+        <td>{{ pelicula.pais }}</td>
+        <td>{{ pelicula.titulo }}</td>
+        <td>
+          <button class="btn btn-warning btn-sm me-2" (click)="editarPelicula(pelicula)">Editar</button>
+          <button class="btn btn-danger btn-sm" (click)="eliminarPelicula(pelicula.id)">Eliminar</button>
+        </td>
+      </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

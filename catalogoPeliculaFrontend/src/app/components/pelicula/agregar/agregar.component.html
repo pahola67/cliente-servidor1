@@ -1,0 +1,47 @@
+<div class="container col-md-4 mt-5">
+  <div class="card border-success mb-3" style="max-width:  30rem;">
+    <div class="card-header h3">Agregar Pelicula</div>
+    <div class="card-body text-primary">
+      <form action="" class="was-validated">
+        <div class="md-3 ">
+          <label for="validationServer01" class="form-label">Titu;o</label>
+          <input  [(ngModel)]="pelicula.titulo" name= "titulo" type="text" class="form-control is-valid"  required>
+        </div>
+
+        <div class="md-3 ">
+          <label for="validationServer01" class="form-label">Año</label>
+          <input  [(ngModel)]="pelicula.anio" name= "anio" type="number" class="form-control is-valid"  required>
+        </div>
+
+        <div class="md-3 ">
+          <label for="validationServer01" class="form-label">Director</label>
+          <input  [(ngModel)]="pelicula.director" name= "direccion" type="text" class="form-control is-valid"  required>
+        </div>
+
+        <div class="md-3 ">
+          <label for="validationServer01" class="form-label">Duración</label>
+          <input  [(ngModel)]="pelicula.duracion" name= "duracion" type="number" class="form-control is-valid"  required>
+        </div>
+
+        <div class="md-3 ">
+          <label for="validationServer01" class="form-label">Idioma</label>
+          <input  [(ngModel)]="pelicula.idioma" name= "idioma" type="text" class="form-control is-valid"  required>
+        </div>
+
+        <div class="md-3 ">
+          <label for="validationServer01" class="form-label">Pais</label>
+          <input  [(ngModel)]="pelicula.pais" name= "idioma" type="text" class="form-control is-valid"  required>
+        </div>
+
+        <div class="md-3 ">
+          <label for="validationServer01" class="form-label">Creado por</label>
+          <input  [(ngModel)]="pelicula.creado_por" name= "creado_por" type="text" class="form-control is-valid"  required>
+        </div>
+
+        <div class="d-grid gap-2 d-md-flex justify-content-md-end mt-3">
+          <button class="btn btn-primary me-md-2" type="button" (click)="Guardar(pelicula)">Guardar</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
