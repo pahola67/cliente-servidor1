@@ -87,6 +87,7 @@ Asegúrate de tener instaladas estas tecnologías:
 │   └── ...
 └── README.md
 ```
+---
 ### Back-End
 🧠 Explicación de la Estructura
 
@@ -96,6 +97,7 @@ cliente/src/app/service/ → Servicios HTTP para conectarse con el backend.
 servidor/src/main/java/... → Controllers, services, repositories y entidades.
 application.properties → Configuración de la conexión MySQL.
 
+---
 🛠️ Instrucciones de Configuración y Ejecución
 ### 1️⃣ Configurar el Back-End (Spring Boot)
 cd servidor
